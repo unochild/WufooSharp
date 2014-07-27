@@ -265,7 +265,7 @@ namespace WufooSharp
             var data = Encoding.UTF8.GetBytes(strData);
 
             var req = WebRequest.Create(url);
-            req.ContentType = "multipart/form-data";
+            req.ContentType = "application/x-www-form-urlencoded";
             req.Method = method;
             req.ContentLength = data.Length;
             req.Credentials = new NetworkCredential(_apiKey, _apiKey);
